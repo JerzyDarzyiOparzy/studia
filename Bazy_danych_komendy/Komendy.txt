@@ -17,3 +17,6 @@
 17)	Git remote add origin https://github.com/JerzyDarzyiOparzy/studia.git
 18)	Git push -u origin master
 19)	git remote set-url origin https://github.com/JerzyDarzyiOparzy/Bazy_Danych.git
+20)     git clone https://github.com/JerzyDarzyiOparzy/studia.git
+21)     git push
+22)     git pull
