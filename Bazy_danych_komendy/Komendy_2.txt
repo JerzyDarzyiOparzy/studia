@@ -1,0 +1,22 @@
+1)	Git status
+2)	Ls
+3)	Git init
+4)	Cd
+5)	Git add 1.txt
+6)	Git add -A
+7)	Touch 1.txt
+8)	Git commit -m” BlaBla„
+9)	Git config --global user.name „Your name”
+10)	Git config --global user.email you@example.com
+11)	Git log
+12)	Git commit -am”BlaBla”
+13)	Git checkout -b”BlaBla”
+14)	Git branch
+15)	Git checkout master
+16)	Git merge BlaBla
+17)	Git remote add origin https://github.com/JerzyDarzyiOparzy/studia.git
+18)	Git push -u origin master
+19)	git remote set-url origin https://github.com/JerzyDarzyiOparzy/Bazy_Danych.git
+20)     git clone https://github.com/JerzyDarzyiOparzy/studia.git
+21)     git push
+22)     git pull
