@@ -19,7 +19,8 @@ id_postaci=3;
 Zad 2.
 
 1. 
-	CREATE TABLE walizka (id_walizki int AUTO_INCREMENT PRIMARY KEY NOT NULL, pojemnosc int UNSIGNED, kolor enum('rozowy', 'czerwony', 'teczowy', 'zolty'), id_wlasciciela int, FOREIGN KEY (id_wlasciciela) REFERENCES postac(id_postaci) ON DELETE CASCADE);
+	CREATE TABLE walizka (id_walizki int AUTO_INCREMENT PRIMARY KEY NOT NULL, pojemnosc int UNSIGNED, 
+    kolor enum('rozowy', 'czerwony', 'teczowy', 'zolty'), id_wlasciciela int, FOREIGN KEY (id_wlasciciela) REFERENCES postac(id_postaci) ON DELETE CASCADE);
 
 2. 
 	ALTER TABLE walizka ALTER kolor set default 'rozowy';
@@ -32,7 +33,8 @@ Zad 2.
 Zad 3.
 
 1.
-	CREATE TABLE izba (adres_budynku varchar(100), nazwa_izby varchar(100), primary key(adres_budynku, nazwa_izby), metraz int UNSIGNED, wlasciciel int, FOREIGN KEY (wlasciciel) REFERENCES postac(id_postaci) ON DELETE SET NULL);
+	CREATE TABLE izba (adres_budynku varchar(100), nazwa_izby varchar(100), 
+    primary key(adres_budynku, nazwa_izby), metraz int UNSIGNED, wlasciciel int, FOREIGN KEY (wlasciciel) REFERENCES postac(id_postaci) ON DELETE SET NULL);
 	
 2.
 	ALTER TABLE izba ADD COLUMN kolor_izby varchar(30) DEFAULT 'czarny' AFTER metraz;	
@@ -43,7 +45,8 @@ Zad 3.
 Zad 4.
 
 1.
-	CREATE TABLE przetwory (id_przetworu int PRIMARY KEY AUTO_INCREMENT NOT NULL, rok_produkcji int(4) DEFAULT '1654', id_wykonawcy int, FOREIGN KEY (id_wykonawcy) REFERENCES postac(id_postaci), zawartosc varchar(150), dodatek varchar(150) DEFAULT 'papryczka chilli', id_konsumenta int, FOREIGN KEY (id_konsumenta) REFERENCES postac(id_postaci));
+	CREATE TABLE przetwory (id_przetworu int PRIMARY KEY AUTO_INCREMENT NOT NULL, rok_produkcji int(4) DEFAULT '1654', id_wykonawcy int, 
+    FOREIGN KEY (id_wykonawcy) REFERENCES postac(id_postaci), zawartosc varchar(150), dodatek varchar(150) DEFAULT 'papryczka chilli', id_konsumenta int, FOREIGN KEY (id_konsumenta) REFERENCES postac(id_postaci));
 	
 2.
 	INSERT INTO przetwory VALUES (default, default, 1, 'bigos', default, 3);
