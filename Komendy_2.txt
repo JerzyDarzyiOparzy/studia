@@ -1,4 +1,4 @@
-1)	Git status
+﻿1)	Git status
 2)	Ls
 3)	Git init
 4)	Cd
@@ -6,8 +6,8 @@
 6)	Git add -A
 7)	Touch 1.txt
 8)	Git commit -m” BlaBla„
-9)	Git config --global user.name „Your name”
-10)	Git config --global user.email you@example.com
+9)	Git config --global user.name „JerzyDarzyiOparzy”
+10)	Git config --global user.email przemyslaw.cwik@o2.pl
 11)	Git log
 12)	Git commit -am”BlaBla”
 13)	Git checkout -b”BlaBla”
