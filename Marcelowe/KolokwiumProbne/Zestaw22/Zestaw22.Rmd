@@ -1,0 +1,51 @@
+---
+title: "Programowanie strukturalne - Kolokwium 1 - Zestaw 22"
+lang: pl
+output:
+  pdf_document: default
+  word_document: default
+---
+
+**Każde zadanie powinno być w oddzielnym pliku. Rozwiązanie umieść 
+na swoim indywidualnym repozytorium na Githubie (pojedyncze pliki) lub prześlij jako archiwum zip
+poprzez wiadomość prywatną na MS Teams.** 
+
+1. W folderze Debug22 znajduje się projekt z kodem w języku C.
+W pliku main.c w niektórych linijkach są komentarze. 
+Twoim zadaniem jest wpisanie wartości odpowiednich zmiennych po wykonaniu konkretnej linii kodu.
+
+*Punktacja: 1 pkt za każdą poprawną linijkę, łącznie 8 pkt.*
+
+2. Napisz funkcję, która ma dwa argumenty: dodatnią liczbę całkowitą $n$ oraz dodatnią liczbę wymierną $x$. Funkcja ma wyświetlić na standardowym wyjściu obliczoną wartość wyrażenia:
+
+
+
+$$1+x+\frac{x^2}{2!}+ \frac{x^3}{3!} +\ldots + \frac{x^n}{n!}$$
+
+Stwórz przypadek testowy.
+
+
+
+*Punktacja: 9 pkt.*
+
+3. Napisz funkcję `foo`, która ma dwa argumenty. Pierwszym argumentem jest wskaźnik `wsk1` na stałą wartość typu `float`, drugim argumentem jest stały wskaźnik `wsk2` na zmienną typu `float`. Funkcja `foo` ma zwrócić liczbę całkowitą zawierającą informację ile bajtów jest pomiędzy adresami przekazanymi do funkcji. Stwórz dwa przypadki testowe.
+
+
+
+*Punktacja: 10 pkt.*
+
+4. Napisz rekurencyjną funkcję, której argumentami są dwie dodatnie licznie całkowite. Funkcja ma zwrócić najmniejszą wspólną wielokrotność liczb przekazanych jako argumenty funkcji. 
+
+Stwórz dwa przypadki testowe.
+
+
+
+*Punktacja: 11 pkt.*
+
+5. Napisz funkcję, która otrzymuje dwa argumenty: dodatnią liczbę całkowitą
+
+$n$ oraz $n$-elementową tablicę `tab` o elementach typu `int`. Funkcja ma potroić wszystkie elementy parzyste w tablicy przekazanej jako argument. Stwórz dwa przypadki testowe dla funkcji.
+
+
+
+*Punktacja: 12 pkt.*

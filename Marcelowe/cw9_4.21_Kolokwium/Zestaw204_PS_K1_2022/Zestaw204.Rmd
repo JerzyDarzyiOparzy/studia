@@ -1,0 +1,48 @@
+---
+title: "Programowanie strukturalne - Kolokwium 1 - Zestaw 204"
+lang: pl
+output:
+  pdf_document: default
+---
+
+**Każde zadanie powinno być w oddzielnym pliku. Rozwiązanie jako archiwum zip umieść 
+na swoim indywidualnym prywatnym kanale MS Teams pod poleceniem.** 
+
+1. W folderze Debug204 znajduje się projekt z kodem w języku C.
+W pliku main.c w niektórych linijkach są komentarze. 
+Twoim zadaniem jest wpisanie wartości odpowiednich zmiennych po wykonaniu konkretnej linii kodu.
+
+*Punktacja: 1 pkt za każdą poprawną linijkę, łącznie 8 pkt.*
+
+2. Napisz funkcję, która ma dwa argumenty: dodatnią liczbę całkowitą $n$ oraz dodatnią liczbę wymierną $x$. Funkcja ma zwrócić obliczoną wartość wyrażenia:
+
+
+
+$$1-x+\frac{x^2}{2}- \frac{x^3}{3} +\ldots + (-1)^n\cdot\frac{x^n}{n}$$
+
+Stwórz przypadek testowy.
+ 
+
+*Punktacja: 9 pkt.*
+
+3. Napisz bezargumentową funkcję, która rezerwuje blok czterech zmiennych typu `int`. Funkcja ma ustawić kolejno w pamięci wartości 5,2,-3 i -5. Na koniec funkcja powinna zwrócić wskaźnik na ostatnią zmienną z bloku. Stwórz przypadek testowy w `main` tak, aby wyświetlić na konsoli wartości zmiennych przechowywanych na bloku stworzonym wewnątrz funkcji.
+
+*Punktacja: 10 pkt.*
+
+4. Napisz rekurencyjną funkcję, zwracającą dla otrzymanej w argumencie 
+nieujemnej liczby całkowitej $n$ wartość elementu o indeksie $n$ ciągu
+zdefiniowanego w następujący sposób:
+
+$$ a_0=a_1=2$$
+$$a_{2n} = a_{n}$$
+$$a_{2n+1} = a_n+1$$
+
+Stwórz dwa przypadki testowe.
+
+*Punktacja: 11 pkt.*
+
+5. Napisz funkcję, która otrzymuje dwa argumenty: dodatnią liczbę całkowitą
+$n$ oraz $n$-elementową tablicę `tab` o elementach typu `int`. Funkcja ma potroić elementy parzyste znajdujące się w tablicy. Stwórz przypadek testowy.
+
+
+*Punktacja: 12 pkt.*

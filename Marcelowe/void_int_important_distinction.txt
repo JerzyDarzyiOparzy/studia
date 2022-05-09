@@ -1,0 +1,2 @@
+Używamy int do funkcji, gdy chcemy coś zwrócić.
+Używamy void, gdy nie chcemy nic zwracać, chcemy wykonać procedurę.

@@ -1,0 +1,7 @@
+int %d %i
+unsigned int %u
+float %f %e
+double %lf
+char %c
+scanf(" ",&zmienna);
+printf(" ",zmienna);
