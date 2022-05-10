@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1652100182 source:c:\users\przem\onedrive\pulpit\c zadania\1dokolosa\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1652100682 source:c:\users\przem\downloads\main.c
+	<stdio.h>
+	<stdlib.h>
+
