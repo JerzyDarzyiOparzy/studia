@@ -1,0 +1,12 @@
+a=5
+b=10
+c=4.0
+d=6.0
+e="jeden"
+f="dwa"
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)

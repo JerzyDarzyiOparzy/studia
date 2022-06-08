@@ -1,0 +1,2 @@
+bread 1.99
+tomatoes 4.0

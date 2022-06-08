@@ -1,0 +1,422 @@
+# Protip: Szukajcie albo exercise, albo excercise, my dumb as can't write this word for the life of me 3:
+
+2.24
+
+	>WstępPython
+
+Zapisując komendy w PyCharm może być konieczne użycie print() by otrzymać wynik polecenia.
+
+print()		W konsoli wyświetla podaną informację
+print("placeholder")		W konsoli wyświetli tekst w cudzysłowie
+print("a =", a)		W konsoli wyświetli "a =" po czym wyświetli wartość która jest podana dla a.
+print(a+b)		W konsoli wyświetli wynik a+b
+
+x / y		x podzielone przez y
+x ** y		x do potęgi y
+9 ** .5		9 do potęgi .5, czyli 1.2, czyli pierwiastek 2 stopnia z 9 = 3
+a = placeholder		deklaruje a jako dany typ informacji
+a = 10		deklaruje a z numerem 10
+word = 'test'		deklaruje word z stringiem 'test'
+
+type(a)		Podaje typ clasy danej zadeklarowanej wartości
+dir(a)		Podaje listę działających atrybutów dla a
+
+"hello".upper()		zwraca string w dużych literach
+word.upper()		zwraca word w dużych literach
+word.lower()		zwraca word w małych literach
+word.capitalize()		zwraca word z pierwszą dużą literą
+word.endswith('st')		zwraca true lub false, w zależności czy word kończy się na parametrze
+						(st jest na końcu stringa, więc zwróci True)
+word.endswith('a')		(a nie jest na końcu strina, więc zwróci False)
+word.swapcase()			zwróci string z odwróconymi wielkościami liter (uppercase and lowercase swap)
+
+	>ModulMath
+
+import math		importuje modul math do aktualnego pliku .py
+
+#Three (good) options to access a module:
+
+1. Use the full name
+import math
+print(math.sin(0.5))
+print(math.pi)
+
+2. Use some abbreviation
+import math as m
+print (m.sin(0.5))
+print (m.pi)
+
+3. import all objects we need explicitly
+from math import sin, pi
+print(sin(0.5))
+print(pi)
+
+math.sqrt(a)		zwraca pierwiastek a
+math.pi		pi
+help(math.sqrt)		pomoc do math.sqrt (podaje komendy współpracujące z nią)
+
+b = 2
+float(b)		zamienia b (w tym przypadku int = 2) na float (z 2 na 2.0)
+
+	>Conditionals
+	
+a = True		a jest równe True 
+b = False		b jest równe False
+
+x and x		zwróci prawdę, kiedy obie są prawdziwe, inaczej fałsz
+x or  x		zwróci prawdę, gdy jedne są prawdziwe
+
+not True		zwróci False
+not False		zwróci True
+
+>; >=; <; <=; ==; !=		zwróci prawdę jeżeli lewa strona będzie prawdziwa w stosunku do prawej,
+							w innym wypadku zwróci fałsz
+
+x = 30
+print(x >= 30)		True
+print(x > 15)		True
+print(x > 30)		False
+print(x == 30)		True
+print(not x == 42)	True
+print(x != 42)		True
+
+	>Funkcje
+
+def nazwa(x, y):
+	{Zawartość}		Funkcje będą nazwane w oparciu jaką wpiszemy 'nazwa', wartości x, y, etc.
+					muszą być podane i będą wykorzystane w funkcji do jej wykonania
+
+def plus42(n):
+    """Add 42 to n and return"""        #docstring
+    l = n + 42                          #body of function
+    return l
+
+Przykładowa funkcja, dla podanego n, utworzy tymczasowe l, które będzie się równało n + 42.
+Następnie zwróci tą liczbę, oraz zakończy funkcję.
+Wywołujemy poprzez, np:
+	print(plus42(28))
+otrzymamy 70
+
+Powinniśmy użyć return by podać końcową wartość, by zapobiec błędom.
+
+print(type(print42))		Zwróci <class 'function'>
+
+
+
+3.03
+
+	>Strings
+	
+a = "Hello World"		a = podany string w cudzysłowie
+len(a)		zwróci długość stringa
+
+np.
+a = "One"
+b = "Two"
+c = "Three"
+
+d = a + b + c		Zwróci złączone ze sobą kolejno stringi a, b oraz c
+
+print(d) zwróci 'OneTwoThree'
+
+print(d * 5) zwróci 'OneTwoThreeOneTwoThreeOneTwoThreeOneTwoThreeOneTwoThree'
+
+print(d[0], d[1], d[2])		d[0] będzie odnosiło się do pierwszej litery stringa (zaczynamy od 0, idziemy kolejno dalej z d[1], d[2], etc.)
+otrzymamy 'O n e'
+
+print(d[-1])		otrzymamy ostanią literę stringa
+print(d[4:])		otrzymamy string bez pierwszych 4 wartości
+print(d[:-1])		otrzymamy string bez ostatniej wartości
+
+s = """My first look at Python was an accident, and I didn't much like what I saw at the time."""
+print(s.count("e"))		.count() liczy wystąpienia rzeczy zawartej w nawiasie w tym czemu przydzielimy funkcję
+print(s.count("an"))
+print(s.replace("a", "0"))	.replace(,) zastąpi każde wyrażenie podane jako pierwsze, wyrażeniem podanym jako drugim,
+							możemy dać trzecie wyrażenie liczbę, by określić ile razy ma nastąpić zamiana, zamiast nieskończenie
+print(s.upper())		.upper() uppercases the sentence
+print(s.swapcase())		.swapcase() swaps casing of letters (A => a; b => B)
+
+	>if-then-else
+
+if {warunek}:		Jezeli podany przez nas warunek zostanie spełniony, zostanie wykonane polecenie zawarte w if 
+	{polecenie}
+elif:				Jeżeli nie zostanie spełniony warunek, możemy sprawdzić kolejny używając elif
+	{polecenie2}
+else:				Jeżeli żaden warunek się nie spełni, możemy użyć else by wykonać dane polecenie w takiej ewentualności
+	{polecenie3}
+	
+możemy wrzucić if-else statements do funkcji, by używać ją w łatwy i intuicyjny sposób w dowolnym miejscu w pliku.
+np.
+
+
+def slength1(s):
+    if len(s)>10:
+        ans = 'very long'
+    else:
+        ans = 'normal'
+    return ans
+	
+
+	>Lists
+print([])		wyświetla pustą listę
+print([42])		lista zawierająca '42'
+print([5, 'hello', 17.3])		lista zawierająca [5, 'hello', 17.3]
+print([[1, 2], [3, 4], [5, 6]])		lista zawierająca [[1, 2], [3, 4], [5, 6]]
+
+a = []		a zdefiniowana jako pusta lista
+a.append('')		dodaje na koniec listy wartość w cudzysłowie
+
+np.
+a = ['dog', 'cat', 'mouse', [1, 10, 100, 1000]]
+
+print(a)	drukuje całą listę
+print(a[3])		drukuje czwartą pozycję listy, [1, 10, 100, 1000]
+print(max(a[0]))		drukuje wartość najbliżej środka w wyrazie 'dog'
+print(min(a[0]))		drukuje wartość najdalej od środka w wyrazie 'dog'
+print(a[3][0])			drukuje pierwszą wartość z zbioru liczb na czwartym miejscu w a.
+
+np.
+a = "hello world"
+print(a[4])		drukuje 5 słowo w stringu
+print(a[4:7])		drukuje słowa od 5 do 8
+print(len(a))		drukuje długość stringu a
+print('d' in a)		drukuje, czy 'd' znajduje się w a (True)
+print('x' in a)		drukuje, czy 'x' znajduje się w a (False)
+print(a + a)		drukuje a + a, czyli 'hello worldhello world'
+print(3 * a)		drukuje 3 * a, czyli 'hello worldhello worldhello world'
+
+	>Loops
+
+animals = ['dog', 'cat', 'mouse']		lista z 3 stringami
+for animal in animals:					dla każdej wartości(w tym przypadku stringa) w animals
+    print("This is the {}".format(animal))		wyświetl "This is the animal", .format(animal) mówi,
+												do czego ma się odwołać {}, otrzymamy 3 zdania, jedno dla każdego zwierzęta.
+
+
+for i in [0, 1, 2, 3, 4, 5]:		otrzymamy oddzielne zdanie dla każdej z liczby w liście
+    print("The square of {} is {}"		.format(i, i**2) oznacza, że dla np. 2 wstawimy w pierwsze {} i, czyli 2,
+          .format(i, i**2))				zaś w drugim {} wstawimy i**2, czyli 2^2, czyli 4. Wykonane jest to kolejno dla każdej liczby, od 0 do 5
+
+print(list(range(0, 10)))		drukuje liczby w odstępie 1, od 0 do 9 (10 to granica końcowa nie wliczona w listę)
+print(list(range(0, 10, 2)))		drukuje liczby w odstępie 2, od 0 do 8
+print(list(range(5, 4)))			zbiór pusty, idąc do przodu nie może wykonać polecenia
+print(list(range(5, 4, -1)))		otrzymamy 5, idziemy do tyłu, i jedynie możemy podać 5 zanim dojdziemy do granicy 4
+print(list(range(1, 10, 2)))		zbiór o odstępie 2, od 1 do 9
+
+for i in [0, 3, 4, 19]:		drukuje oddzielnie każdą liczbę
+    print(i)
+
+for animal in ['dog', 'cat', 'mouse']:		drukuje oddzielnie każdy string
+    print(animal)
+
+for letter in "Hello World":		drukuje oddzielnie każdą literkę stringa
+    print(letter)
+
+for i in range(5):		drukuje od 0 do granicy (5) oddzielnie każdą liczbę
+    print(i)
+	
+	>Tuples
+
+t = (3, 4, 50)		Tuples(krotki) to stala lista
+<class 'tuple'>
+
+a = 10, 20, 30		Tuples are defined by the comma, not the parenthesis
+					The parenthesis are optional, but should be written anyway for readability
+
+Tuples are used in cases where we want to make sure, that a set of objects doesn't change.
+Tuples allow to assign several variables in one line (known as tuple packing and unpacking).
+
+s, y, z = 0, 0, 1
+print(s, y, z)		otrzymamy '0 0 1'
+
+This allows instantaneous swap of values
+a = 1
+b = 2
+print(a, b)
+a, b = b, a
+print(a, b)
+
+\
+a = 'hello world'
+a[4] = 'x'
+Wystapi blad, tuple jest immutable, nie bedzie mozna zmienic go
+b = a[0:3] + 'x' + a[4:]
+print(a)
+Okrezna droga do zmiany tuple, wycinamy i wstawiamy
+\
+
+print(tuple([1, 4, 'dog']))			zwraca (1, 4, 'dog')
+print(list((10, 20, 30)))			zwraca [10, 20, 30]
+print(list(range(5)))				zwraca [0, 1, 2, 3, 4]
+print(iter([1, 2, 3]))				zwraca techno mumbo jumbo (don't judge, just try it smarty smart :P)
+
+
+
+3.10
+### Od tego momentu będę robił opisy i odwołania, w celu łatwego szukania przez ctrl+f,
+nieznane pojęcia opiszę, ale nie zagłębiam się już bo strata czasu, powinno się już to umieć czytać i rozumieć z lekcji ;) ###
+
+	>ZadanieDodatkowe1
+
+Wzór funkcji na palindrom
+
+	>While loop
+
+while {argument}:		wykonuje kod tak długo, jak argument podany przez nas jest prawdziwy
+	{kod}
+	
+W pliku wzmianka o id(a); a is b; a == b; eps
+
+	>EfektUbocznyFunkcji
+
+Tłumaczenie jak poprawnie tworzyć funkcje, by nie usunąć tabeli, którą chcemy użyc w jej wykonaniu
+odwołanie do sum(xs); sum(xs1); sum(xs2)
+
+	>FirstInFirstOut (FIFO)
+
+	>FirstInLastOut (FILO)
+Inaczej Stos / Stack[z ang]
+Schemat na tworzenie stosu i manipulowaniem jego zawartością w pliku. Do własnego zrozumienia.
+W pliku wzmianka o def; add(name); q.append(name); next(); return q.pop(); show(); length(); len(q)
+
+	>NumberFunctions
+Plik z zadania funkcji na numerach:
+funkcja omijająca 13 skip13; 
+funkcja wstawiająca liczby z range 2 razy większe od podanych range_double;
+
+	>Pliki
+Opisuje otwieranie, czytanie i pisanie w plikach tekstowych (i binarnych I guess, nie używaliśmy)
+Wzmianka o f = open, read, write, 'r', 'w', for line in f: print(line, end=""); .split
+
+.split rozdziela słowa, albo na argumencie który podamy
+
+	>ExcerciseShoppingList
+Przykładowe zadanie używające odczytywania i pisania w plikach,
+do interpretacji własnej bo zbyt długie do pisemnego tłumaczenia
+
+
+
+3.17
+
+	>DateTime
+przywoływanie daty i czasu, oraz przekształcanie w inne wersje do odczytania
+Wzmianka o datetime.datetime.now(); str(); repr()
+
+	>DefaultArguments
+podając do definicji wartości, możemy nadać jej domyślne wartości które się pojawią w przypadku,
+gdy nie podamy jej w wywołaniu funkcji
+
+przywoływając funkcję możemy podać wartości w innej kolejności, ale musimy podać do czego się odwołuje, np.
+dla def f(a, b, c) jeżeli podamy
+f(c=3, a=1, b=2) to się równa f(1, 2, 3)
+
+	>FileException
+Sposób zapisania wyjątku, gdy przywołujemy nieistniejący plik, dobry placeholder
+# 'catching' an error when file is not found
+Wzmianka do import sys; except OSError; error; .format(error); FileNotFoundError; sys.exit(1); ValueError exception;
+
+# To raise a ValueError exception, we use
+raise ValueError("Message")
+# And can attach a message "Message" to that exception which can be seen when the exception is reported or caught
+
+	>HighOrderFunctions
+Zadanie na funkcję, dla kwadratu i sześcianu
+Wzmianka do square; cubic;
+
+	>main
+Przedstawienie importowania innych plików
+Wzmianka do import module1;
+
+	>module1
+Przykładowy plik, który jest użyty do przedstawienia importowania, oraz zależności z __name__ i __main__
+gdy wywołujemy nazwę w pliku module1 lub mainie.
+Wzmianka o test_for_useful_function(); __name__ == "__main__"; "Setting up library";
+
+	>NameSpaces & NameSpaceExample
+Plik przedstawiający działanie zmiennych, w zależności gdzie zostaną wywołane,
+oraz jak można mieć wpływ na globalną zmienną w lokalnej funkcji.
+Wzmianka o global; local; back in main;
+
+	>OldFormatting
+Plik pokazujący stary format
+please do not use this
+please
+Educational purposes bro.
+Use the formatting from the file mentioned below.
+Wzmianki do %f; %d; %e; %g; % p; AU; %s; %r;
+
+	>NewStyleFormattingForActualUse
+NewStyleFormattingForActualUse that we actually use in Python
+Wzmianki o import math; format; pints; approx; format; formatting;
+
+	>NumberExcercise
+Do not look in this file.
+It is an unfinished excercise my lazy bum was too lazy to lazer over.
+Wzmianki do shopping cost; numbers; fout.write; itemname; totalcost; unfinished; 
+UNFINISHED!;
+
+	>OverridingSeparation
+Przykład jak pominąć separację, która domyślnie zachodzi przy wywoływaniu kolejnych print.
+Wzmianka o end=''; seperation; overriding separation; print;
+
+	>StrFunctionAndStrMethod
+Sposoby przekształcania i przedstawiania innych klas w postaci stringa.
+Wzmianki do __str__; string; print;
+
+	>TheEvalFunction
+TODO: Ask Philip what the hell this does. No like seriously the hell's self modyfing code??? -w-
+"Bezuyteczne" -Filip
+Go figure...
+
+	>trigtable
+Przsykład zadania z trójkątem trygonometrycznym
+Wzmanki o funcs; pi; __name__; import math; sin; cos;
+
+	>UsesForRaiseValueError
+Przykład użycia, np. gdy chcemy pokazać, że kod nie jest skończony i nie ma być użyty.
+Wzmianki o NotImplementedError; my_complicated_function; raise; format; message;
+
+
+3.24
+
+	>Reduce
+Przedstawienie użycia Reduce;
+Wzmianka o import operator; from functools import reduce; reduce; operator; lambda;
+
+	>Recursion
+Zadanie z factorial i ciągiem fibonacci'ego.
+Wzmianka o elif; else; fibonacci; factorial; recursion; recursive def;
+
+	>Object-Oriented_FIFO_Solution
+TODO: Ask Philip the hell this means.
+"Tworzysz klasy i w niej metody selfem obiektowo" - Filip
+nice :)
+
+	>MapLongExercise
+Sposób w jaki programiści kodują w Python, kod trochę złośliwy do zrozumienia, ale wydajny i przydatny.
+Wzmianka o join; map; lambda; w; news.split(); Python programming occasionally more fun than expected; slug; slug2;
+
+	>Map
+Użycie funkcji map, list i lambda
+Wzmianka o import math; math.exp;
+
+	>List comprehension
+Dużo przykładów z listami i x for x in range oraz atrybutami
+Wzmianki o import math; range; x for x in range; if x > y; .upper(); .lower(); .len(); for w in words;
+for i in stuff;
+
+	>HigherOrderFunctions2
+Użycie lambdy i quad do wykonania zadania
+
+	>Filter
+Filtrowanie wyników w różne sposoby
+Wzmianka o list; filter; map; len_gr_4; len(); is_positive(); lambda; x for x in ; if; "The quick brown fox jumps".split();
+
+	>Closures
+	TODO: Filip
+"Obiektowe nie polecam" -Filip
+
+	>Dictionaries
+Słowniki, cała notacja jest zawarta w pliku.
+Wzmianka o d = {}; .keys(); order = {}; for x in y.keys(); dictionary; słownik; slownik; tablica assycyjna;
+tablica haszująca; associative arrays; hash tables; klucze;
