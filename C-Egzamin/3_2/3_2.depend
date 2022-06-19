@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1655598610 source:c:\users\przem\onedrive\pulpit\c-egzamin\3_2\main.c
+	<stdio.h>
+	<stdlib.h>
+
